@@ -3,7 +3,7 @@ Zabbix template for Keenetik/Netcraze router measure LTE network parameters by s
 
 Шаблон для Zabbix для роутеров Keenetik/Netcraze для измерения параметров мобильной сети LTE встроенными или внешними модемами 4G.
 
-Основные OID  имена параметров импортированы из  CISCO-WAN-3G-MIB и CISCO-WAN-CELL-EXT-MIB.
+Основные OID, а также имена параметров импортированы из  CISCO-WAN-3G-MIB и CISCO-WAN-CELL-EXT-MIB.
 
 Всего используется/реализовано 2 дерева OID:
 
@@ -11,5 +11,9 @@ Zabbix template for Keenetik/Netcraze router measure LTE network parameters by s
 
 .1.3.6.1.4.1.9.9.817.1.1.1.1.1 (CISCO-WAN-CELL-EXT-MIB)
 
-Макросы LLD шаблона обнаруживают все имеющиеся на роутере модемы 4G, индекс устройства содержится  в значении параметра - например, RSSI[29].
+Макросы LLD обнаруживают имеющиеся на роутере модемы 4G по каждому параметру отдельным правилом discovery, индекс устройства содержится  в значении параметра - например, RSSI[29].
 
+Такое поведение правил discovery немного избыточно (сейчас для всех параметров индекс устройства одинаков), но позволяет не менять шаблон при смене логики построения дерева OID вендором. 
+
+
+Шаблон проверен на Zabbix-7.4.7 c Keenetik Hero 4G+ и Keenetik Hopper + ext. L860 LTE
