@@ -17,3 +17,5 @@ Zabbix template for Keenetik/Netcraze router measure LTE network parameters by s
 
 
 Шаблон проверен на Zabbix-7.4.7 c Keenetik Hero 4G+ и Keenetik Hopper + ext. L860 LTE
+
+Подключение стандартное: импортируете шаблон в Zabbix, затем прикрепляете его к наблюдаемому по SNMP устройству.
